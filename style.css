@@ -4,8 +4,9 @@
 }
 
 body{
-    background: url("img/header/background_img.jpg");
+    background: url("img/header/background.jpg");
     background-size: cover;
+    color: white;
 }
 
 nav{
@@ -24,7 +25,18 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.79);
-    
+    gap: 30px;
+    margin-top: 200px;
+    text-align: center;
 }
 
+h1{
+    font-family: "Russo One";
+    font-size: 70px;
+}
+
+h2{
+    font-family: "M PLUS Rounded 1c";
+    font-size: 25px;
+    width: 300px;   
+}
