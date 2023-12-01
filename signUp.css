@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+.sign_up{
+    background: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign_up_title{
+    color: #004225;
+    font-size: 45px;
+    font-family: "Fira Sans";
+    font-weight: bold;
+}
+
+input{
+    width: 600px;
+    height: 50px;
+    border: 3px solid #004225;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input::placeholder{
+    text-align: center;
+    font-family: "Jost";
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(0, 66, 37, 0.5);
+}
+
+input:focus{
+    outline: 0;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+button{
+    width: 600px;
+    height: 50px;
+    border: 3px solid #004225;
+    background: #F5F5D0;
+    font-size: 20px;
+    color: #004225;
+    border-radius: 12px;
+    font-family: Jost;
+    font-weight: 500;
+}
+
+.sign_up_with{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.icons{
+    width: 30px;
+}
+
+.continue{
+    margin-top: 60px;
+}
