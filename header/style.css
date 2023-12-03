@@ -40,3 +40,8 @@ h2{
     font-size: 25px;
     width: 300px;   
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
