@@ -38,6 +38,8 @@ input{
     background: #F5F5DC;
     font-size: 20px;
     color: #004225;
+    font-family: "Jost";
+    font-weight: 500;
 }
 
 .inputs{
@@ -78,10 +80,7 @@ button{
     border-radius: 12px;
     font-family: Jost;
     font-weight: 500;
-}
-
-.continue{
-    margin-bottom: 140px;
+    cursor: pointer;
 }
 
 .with_google, .with_facebook{
@@ -92,7 +91,7 @@ button{
 }
 
 .with_google{
-    margin-bottom: 20px;
+    margin: 140px 0 20px 0;
 }
 
 .icons{
@@ -130,4 +129,9 @@ button{
 
 ol{
     margin-left: 45px;
+}
+
+a{
+    text-decoration: none;
+    color: #004225;
 }
