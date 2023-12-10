@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #F5F5DC;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.names, .salaries{
+    /* width: 380px; */
+    height: 430px;
+    border: 5px solid #004225;
+    margin-top: 100px;
+    border-radius: 12px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inp1{
+    width: 200px;
+    height: 50px;
+    border: 3px solid #004225;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+    margin-bottom: 30px;
+    font-family: "Jost";
+    font-weight: 500;
+}
+
+input::placeholder{
+    text-align: center;
+    font-family: "Jost";
+    font-weight: 500;
+    font-size: 25px;
+    color: rgba(0, 66, 37, 0.5);
+}
+
+input:focus{
+    outline: 0;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+.btn1{
+    width: 200px;
+    height: 50px;
+    border: 3px solid #004225;
+    background: #F5F5DC;
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #004225;
+    margin-top: 50px;
+}
+
+/* .objectives{
+
+} */
