@@ -158,4 +158,30 @@ button, input{
 .checkbox{
     width: 30px;
     height: 30px;
+    display: none;
+}
+
+.fake{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #004225;
+    position: relative;
+}
+
+.fake::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #004225;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.checkbox:checked + .fake::before{
+    opacity: 1;
 }
