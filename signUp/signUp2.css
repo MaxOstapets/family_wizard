@@ -165,7 +165,8 @@ button, input{
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 1px solid #004225;
+    border: 3px solid #004225;
+    border-radius: 50%;
     position: relative;
 }
 
@@ -173,12 +174,13 @@ button, input{
     content: "";
     position: absolute;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background-color: #004225;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
     opacity: 0;
 }
 
