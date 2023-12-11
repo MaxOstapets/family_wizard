@@ -16,7 +16,6 @@ section{
 }
 
 .names, .salaries{
-    /* width: 380px; */
     height: 430px;
     border: 5px solid #004225;
     margin-top: 100px;
@@ -42,7 +41,7 @@ section{
     font-weight: 500;
 }
 
-input::placeholder{
+.inp1::placeholder{
     text-align: center;
     font-family: "Jost";
     font-weight: 500;
@@ -71,6 +70,92 @@ input:focus::placeholder{
     margin-top: 50px;
 }
 
-/* .objectives{
+.objectives{
+    width: 760px;
+    height: 500px;
+    display: flex;
+    margin-bottom: 100px;
+    flex-direction: column;
+    border: 5px solid #004225;
+    border-radius: 12px;
+    gap: 20px;
+}
 
-} */
+.title{
+    font-family: Jost;
+    font-weight: 500;
+    font-size: 30px;
+    border-bottom: 3px solid #004225;
+    color: #004225;
+    display: flex;
+    align-self: flex-start;
+    padding: 1px;
+    margin: 25px 25px;
+}
+
+.inp2{
+    width: 150px;
+    height: 50px;
+    border: 3px solid #004225;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+    font-family: "Jost";
+    font-weight: 500;
+}
+
+.inp2::placeholder{
+    font-family: "Jost";
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(0, 66, 37, 0.5);
+}
+
+
+.objective{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #004225;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+    font-family: "Jost";
+    font-weight: 500;
+}
+
+.inp2, .sum{
+    margin: 0 25px 10px 25px;
+}
+
+.accept{
+    width: 300px;
+    height: 50px;
+    background:#F5F5DC;
+    border: 3px solid #004225;
+    color: #004225;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: "Jost";
+    font-weight: 500;
+    margin: 30px auto;
+}
+
+button, input{
+    cursor: pointer;
+}
+
+.checkbox{
+    width: 30px;
+    height: 30px;
+}
