@@ -74,7 +74,7 @@ input:focus::placeholder{
     width: 760px;
     height: 500px;
     display: flex;
-    margin-bottom: 100px;
+    margin: 0 auto 100px auto;
     flex-direction: column;
     border: 5px solid #004225;
     border-radius: 12px;
