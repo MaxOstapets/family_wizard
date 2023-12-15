@@ -135,3 +135,10 @@ a{
     text-decoration: none;
     color: #004225;
 }
+
+.descriptor_title_sign_in{
+    width: 500px;
+    font-size: 60px;
+    font-family: "Russo One";
+    text-align: center;
+}

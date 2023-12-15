@@ -9,11 +9,16 @@ body{
 
 section{
     display: grid;
-    grid-template-columns: repeat(2, 380px);
+    grid-template: [start] "names salaries" 1fr [row2]
+    [row2] "objectives" 1fr [row-end] / 600px 1fr;
     gap: 100px;
     justify-content: center;
     align-items: center;
 }
+
+.names{grid-area: names;}
+.salaries{grid-area: salaries;}
+.objectives{grid-area: objectives;}
 
 .names, .salaries{
     height: 430px;
@@ -69,7 +74,7 @@ input:focus::placeholder{
     color: #004225;
     margin-top: 50px;
 }
-/* Участок коду, де прописував стилі для таблиці */
+
 .objectives{
     width: 760px;
     height: 500px;
@@ -121,7 +126,7 @@ input:focus::placeholder{
 }
 
 .sum{
-    width: 50px;
+    width: 70px;
     height: 50px;
     border: 3px solid #004225;
     border-top: 0px;
@@ -132,6 +137,10 @@ input:focus::placeholder{
     color: #004225;
     font-family: "Jost";
     font-weight: 500;
+}
+
+.sum::placeholder{
+    text-align: center;
 }
 
 .inp2, .sum{
