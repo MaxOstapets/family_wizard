@@ -5,30 +5,31 @@
 
 body{
     background: #F5F5DC;
+    background-image: url('../img/signUp/Background.svg');
+    background-size: cover;
+}
+
+.background{
+    position: relative;
 }
 
 section{
     display: grid;
-    grid-template: [start] "names salaries" 1fr [row2]
-    [row2] "objectives" 1fr [row-end] / 600px 1fr;
+    grid-template-columns: repeat(2, 380px);
     gap: 100px;
     justify-content: center;
     align-items: center;
 }
 
-.names{grid-area: names;}
-.salaries{grid-area: salaries;}
-.objectives{grid-area: objectives;}
-
 .names, .salaries{
     height: 430px;
     border: 5px solid #004225;
-    margin-top: 100px;
     border-radius: 12px;    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 .inp1{
@@ -79,11 +80,11 @@ input:focus::placeholder{
     width: 760px;
     height: 500px;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     border: 5px solid #004225;
     border-radius: 12px;
     gap: 20px;
+    margin: 100px auto;
 }
 
 .title{
@@ -196,4 +197,9 @@ button, input{
 
 .checkbox:checked + .fake::before{
     opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #004225;
 }
