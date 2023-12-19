@@ -67,7 +67,14 @@ input:focus::placeholder{
 }
 
 .password{
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+.wrong_password, .wrong_email{
+    font-family: "Fira Sans";
+    color: red;
+    font-size: 20px;   
+    margin-bottom: 10px;
 }
 
 button{
