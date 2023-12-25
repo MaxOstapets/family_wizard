@@ -47,7 +47,6 @@ accept.addEventListener('click', ()=>{
     console.log('Загальний масив:', users_objectives);
 
     // localStorage.setItem('Information', JSON.stringify(users_objectives))
-
     
 })
 
