@@ -9,10 +9,6 @@ body{
     background-size: cover;
 }
 
-.background{
-    position: relative;
-}
-
 section{
     display: grid;
     grid-template-columns: repeat(2, 380px);
@@ -126,6 +122,10 @@ input:focus::placeholder{
     justify-content: space-between;
 }
 
+.objective:nth-child(4){
+    margin-bottom: 30px;
+}
+
 .sum{
     width: 70px;
     height: 50px;
@@ -158,45 +158,21 @@ input:focus::placeholder{
     border-radius: 12px;
     font-family: "Jost";
     font-weight: 500;
-    margin: 30px auto;
 }
 
-button, input{
+.next_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
     cursor: pointer;
 }
 
-.checkbox{
-    width: 30px;
-    height: 30px;
-    display: none;
-}
-
-.fake{
-    display: inline-block;
+.check_elipse{
     width: 20px;
     height: 20px;
-    border: 3px solid #004225;
-    border-radius: 50%;
-    position: relative;
-}
-
-.fake::before{
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: #004225;
-    border: 3px solid #004225;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 0;
-}
-
-.checkbox:checked + .fake::before{
-    opacity: 1;
 }
 
 a{
