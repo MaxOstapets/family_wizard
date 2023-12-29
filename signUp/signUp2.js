@@ -14,20 +14,35 @@ const users_objectives = []
 const objectives = []
 const sums = []
 
-const sum_check = /[a-dA-D.*+?^${}()]/
+const sum_salaries = 0
+
+sum.forEach((e) =>{
+    e.addEventListener('input', ()=>{
+        console.log(e.value);
+    })
+})
 
 accept.addEventListener('click', ()=>{
     const user_man_name = man_name.value
     const user_woman_name = woman_name.value
 
-    // const sum_salaries = user_man_salarie + user_woman_salarie
+    objective.forEach((e) => objectives.push(e.value));
+    sum.forEach((e) => {
+        if (isNaN(e.value)){
+            console.log("Error sum");
+        }else{
+
+        }
+
+    })
+
 
     if (isNaN(man_salarie.value) || isNaN(woman_salarie.value)){
-        console.log("error");
+        console.log("Error salarie");
     }else{
         const user_man_salarie = parseFloat(man_salarie.value)
         const user_woman_salarie = parseFloat(woman_salarie.value)  
-        const sum_salaries = user_man_salarie + user_woman_salarie
+        sum_salaries = user_man_salarie + user_woman_salarie
         
         const user_object = new Object()
         user_object.man_object_name = user_man_name
@@ -37,11 +52,6 @@ accept.addEventListener('click', ()=>{
         console.log('Users object:', user_object);    
         console.log('Загальна сума зарплати:', sum_salaries);
     }
-
-    // objective.forEach((e) => objectives.push(e.value));
-    // sum.forEach((e) => {
-    //     if(sum_check.test(e.value)){console.log('Error');}else{sums.push(e.value)}
-    // });
 
     // for(let i = 0; i < 3; i++){
     //     const user_object_objectives = new Object();
@@ -56,3 +66,5 @@ accept.addEventListener('click', ()=>{
     // localStorage.setItem('Information', JSON.stringify(users_objectives))
     
 })
+//arr obj
+//selectorAll зтягуємо усі sum => const spande =  
