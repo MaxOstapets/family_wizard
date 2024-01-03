@@ -67,8 +67,8 @@ accept.addEventListener('click', ()=>{
     }
     console.log(users_objectives);
     console.log(sum_salaries);
-    localStorage.setItem('Information objectives', JSON.stringify(users_objectives))
-    localStorage.setItem('Information users', JSON.stringify(users_object))
-    localStorage.setItem('Total sum', JSON.stringify(sum_salaries))
+    localStorage.setItem('information_objectives', JSON.stringify(users_objectives))
+    localStorage.setItem('information_users', JSON.stringify(users_object))
+    localStorage.setItem('total_sum', JSON.stringify(sum_salaries))
     document.querySelector('.next_page').setAttribute('href', '../profile/profile.html')
 })
