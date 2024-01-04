@@ -94,14 +94,19 @@ main{
     cursor: pointer;
 }
 
-.sum{
-    font-size: 40px;
+.sum, .objectives_sum{
+    margin: 0 0 10px 0;
+}
+
+.titles{
+    margin: 0 0 100px 0;
+    font-size: 20px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #004225;
     font-family: 'Russo One';
-    margin: 0 0 100px 0;
 }
 
 /*OBJECTIVES  */
