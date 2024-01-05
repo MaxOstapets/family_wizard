@@ -19,10 +19,12 @@ const sum = document.querySelector('.sum')
 const objectives_sum = document.querySelector('.objectives_sum')
 
 //CREATE DIV WITH OBJECTIVES
-const objectives = document.querySelector('.objectives')
+const main = document.querySelector('main')
+const objectives_div = document.createElement('div')
+objectives_div.classList.add('objectives')
 
 function create_div_objective(e) {
-    objectives.innerHTML += `
+    objectives_div.innerHTML += `
         <div class="objective">
             <span class="text_objective">${e.user_objective}</span>
             <div class="icon_and_sum">
@@ -30,8 +32,14 @@ function create_div_objective(e) {
                 <img src="../img/profile/check_icon.png" class="check_icon" alt="">
             </div>
         </div>`
-        sum_array.push(e.user_sum)
-    }
+    sum_array.push(e.user_sum)
+    main.append(objectives_div)
+}
+
+console.log(objectives_div);
+// objectives.addEventListener('click', ()=>{
+//     console.log("Hello");
+// })
 
 function create_objective() {
     information_objectives.forEach((e) => create_div_objective(e))
