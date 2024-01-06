@@ -23,23 +23,39 @@ const main = document.querySelector('main')
 const objectives_div = document.createElement('div')
 objectives_div.classList.add('objectives')
 
-function create_div_objective(e) {
-    objectives_div.innerHTML += `
-        <div class="objective">
-            <span class="text_objective">${e.user_objective}</span>
-            <div class="icon_and_sum">
-                <span class="sum_objective">${e.user_sum}</span>
-                <img src="../img/profile/check_icon.png" class="check_icon" alt="">
-            </div>
-        </div>`
-    sum_array.push(e.user_sum)
-    main.append(objectives_div)
-}
+// <div class="objective">
+//     <span class="text_objective">${e.user_objective}</span>
+//     <div class="icon_and_sum">
+//         <span class="sum_objective">${e.user_sum}</span>
+//         <img src="../img/profile/check_icon.png" class="check_icon" alt="">
+//     </div>
+// </div>
 
-console.log(objectives_div);
-// objectives.addEventListener('click', ()=>{
-//     console.log("Hello");
-// })
+function create_div_objective(e) {
+    const objective_div = document.createElement('div')
+    const text_objective = document.createElement('span')
+    const icon_and_sum = document.createElement('div')
+    const sum_objective = document.createElement('span')
+    const check_icon = document.createElement('img')
+
+    objective_div.classList.add('objective')
+    text_objective.classList.add('text_objective')
+    icon_and_sum.classList.add('icon_and_sum')
+    sum_objective.classList.add('sum_objective')
+    check_icon.classList.add('check_icon')
+
+    objective_div.append(text_objective, icon_and_sum)
+    icon_and_sum.append(sum_objective, check_icon)
+    main.append(objectives_div)
+
+    text_objective.innerText = e.user_objective
+    sum_objective.innerText = e.user_sum
+    check_icon.setAttribute('src', '../img/profile/check_icon.png')
+
+    objectives_div.appendChild(objective_div)
+
+    sum_array.push(e.user_sum)
+}
 
 function create_objective() {
     information_objectives.forEach((e) => create_div_objective(e))
