@@ -1,42 +1,46 @@
-*{
+* {
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 }
+
 /* main settings */
-body{
-    width: 100%;
-    height: 3563px;
-    background-image: url("about-us/Background\ \(1\).png");
+body {
+    background-image: url("../img/about-us/Background\ \(1\).png");
+    background-size: cover;
 }
-.container{
+
+.container {
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 2%;
 }
-p{
-font-family: Mulish;
-font-size: 36px;
-font-weight: 400;
-line-height: 45px;
-letter-spacing: 0em;
-text-align: center;
 
+.desc{
+    flex-direction: column;
 }
+
+p{
+    color: #004225;
+    font-size: 30px;
+    padding: 10px;
+}
+
 /* main-description */
-h1{
+h1 {
     display: flex;
     justify-content: center;
     font-family: Russo One;
-font-size: 80px;
-font-weight: 400;
-line-height: 96px;
-letter-spacing: 0em;
-text-align: center;
-color: #004225;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #004225;
 
 }
+
 /* navbar */
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,7 +49,7 @@ nav{
     padding: 15px;
 }
 
-ul{
+ul {
     display: flex;
     align-items: center;
     gap: 150px;
@@ -54,73 +58,81 @@ ul{
     font-family: "M PLUS Rounded 1c";
 }
 
-li{
+li {
     list-style: none;
 }
 
-.logo, .account-logo{
+.logo,
+.account-logo {
     width: 65px;
     height: 65px;
 }
 
-main{
+main {
     margin-top: 100px;
 }
 
-a{
+a {
     text-decoration: none;
     color: #F5F5DC;
 }
+
 /* 1-discriptor */
-.first-desc{
-    display: flex;  
-    margin: 0 auto;
+.first-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desc-text1 {
+    display: flex;
     font-family: "Mulish";
+    letter-spacing: 0em;
+    width: 800px;
 }
-.desc-text1{
-font-family: Mulish;
-font-size: 32px;
-letter-spacing: 0em;
-text-align: left;
-}
-h2{
-    font-family: Russo One;
+
+h2 {
+    font-family: "Russo One";
     font-size: 2rem;
-    padding-left: 20px;
-    text-align: left;
     color: #004225;
- 
+
 }
+
 /* 2-discriptor */
-.sec-desc{
+.sec-desc {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     font-family: "Mulish";
     align-items: center;
 }
-h3{
+
+.desc-text2 p{
+    text-align: center;
+}
+
+h3 {
     font-family: Russo One;
     font-size: 4rem;
     letter-spacing: 0em;
     text-align: center;
     color: #004225;
 }
+
 /* 3-discriptor */
-.third-desc{
-    display: flex;  
-    margin: 0 auto;
+.third-desc {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.desc-text3 {
     font-family: "Mulish";
-    padding: 20px;
-}
-.desc-text3{
-    font-family: Mulish;
-    font-size: smaller;
     letter-spacing: 0em;
-    text-align: right;
+    text-align: left;
+    margin-left: 200px;
 }
-h4{
+
+h4 {
     font-family: Russo One;
     font-size: 60px;
     font-weight: 400;
@@ -129,22 +141,17 @@ h4{
     text-align: left;
     color: #004225;
 }
+
 /* 4-discriptor */
-.fourth-desc{
-    display: flex;  
+.fourth-desc {
+    display: flex;
     margin: 0 auto;
     font-family: "Mulish";
     padding: 20px;
+    justify-content: space-between;
 }
-.desc-text1{
-font-family: Mulish;
-font-size: 36px;
-font-weight: 400;
-line-height: 45px;
-letter-spacing: 0em;
-text-align: left;
-}
-h2{
+
+h2 {
     font-family: Russo One;
     font-size: 60px;
     font-weight: 200;
@@ -153,5 +160,4 @@ h2{
     letter-spacing: 0em;
     text-align: left;
     color: #004225;
- 
 }
