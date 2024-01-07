@@ -9,13 +9,14 @@ let sum_number = 0
 const information_users = JSON.parse(information_users_str)
 const information_objectives = JSON.parse(information_objectives_str)
 const total_sum = JSON.parse(total_sum_str)
+let title_salarie = JSON.parse(total_sum_str)
 
 //QUERY SELECTOR VARIABLES
 const man_name_salarie = document.querySelector('.man_name_salarie')
 const woman_name_salarie = document.querySelector('.woman_name_salarie')
-const total_salarie_sum = document.querySelector('.total_salarie_sum')
+let total_salarie_sum = document.querySelector('.total_salarie_sum')
 const average_expense = document.querySelector('.average_expense')
-const sum = document.querySelector('.sum') 
+let sum = document.querySelector('.sum') 
 const objectives_sum = document.querySelector('.objectives_sum')
 
 //CREATE DIV WITH OBJECTIVES
@@ -23,13 +24,17 @@ const main = document.querySelector('main')
 const objectives_div = document.createElement('div')
 objectives_div.classList.add('objectives')
 
-// <div class="objective">
-//     <span class="text_objective">${e.user_objective}</span>
-//     <div class="icon_and_sum">
-//         <span class="sum_objective">${e.user_sum}</span>
-//         <img src="../img/profile/check_icon.png" class="check_icon" alt="">
-//     </div>
-// </div>
+//AVERAGE EXPENSE && OBJECTIVES SUM
+function average_expense_calc(){
+    for (let i = 0; i < sum_array.length; i++) {
+        sum_number += sum_array[i]
+    }
+    
+    let average_expense_num = sum_number / sum_array.length
+    console.log("Average expense:", Math.floor(average_expense_num));
+    average_expense.innerText = `Середня сума витрат: ${Math.floor(average_expense_num)} грн.`
+    objectives_sum.innerText = `Сума витрат: ${sum_number} грн.`
+}
 
 function create_div_objective(e) {
     const objective_div = document.createElement('div')
@@ -55,32 +60,35 @@ function create_div_objective(e) {
     objectives_div.appendChild(objective_div)
 
     sum_array.push(e.user_sum)
+
+    objective_div.addEventListener('click', ()=>{
+        let minus_sum_number = sum_number - e.user_sum
+        sum_number = minus_sum_number
+
+        let minus_sum_salarie = title_salarie - e.user_sum
+        title_salarie = minus_sum_salarie
+
+        console.log(minus_sum_number);
+        console.log(minus_sum_salarie);
+
+        objectives_sum.innerText = `Сума витрат: ${minus_sum_number} грн.`
+        check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
+        sum.innerText = `Загальна сума: ${minus_sum_salarie} грн.`
+
+        objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
+    })
 }
-
-function create_objective() {
-    information_objectives.forEach((e) => create_div_objective(e))
-}
-
-create_objective()
-
-//AVERAGE EXPENSE && OBJECTIVES SUM
-function average_expense_calc(){
-    for (let i = 0; i < sum_array.length; i++) {
-        sum_number += sum_array[i]
-    }
-    let average_expense_num = sum_number / sum_array.length
-    console.log("Average expense:", Math.floor(average_expense_num));
-    average_expense.innerText = `Середня сума витрат: ${Math.floor(average_expense_num)} грн.`
-    objectives_sum.innerText = `Сума витрат: ${sum_number} грн.`
-}
-
-average_expense_calc(sum_array)
 
 //INNER TEXT
 man_name_salarie.innerText = `${information_users.man_name}: зарплата ${information_users.man_salarie} грн.`
 woman_name_salarie.innerText = `${information_users.woman_name}: зарплата ${information_users.woman_salarie} грн.`
 total_salarie_sum.innerText = `Сума зарплат разом: ${total_sum} грн.`
-sum.innerText = `Загальна сума: ${total_sum} грн.`
+sum.innerText = `Загальна сума: ${title_salarie} грн.`
+
+function create_objective(){information_objectives.forEach((e) => create_div_objective(e))}
+
+create_objective()
+average_expense_calc(sum_array) 
 
 //CONSOLE LOG INFORMATION
 console.log("Array with sums:", sum_array);

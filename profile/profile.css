@@ -131,6 +131,10 @@ main{
     color: #004225;
 }
 
+.objective:hover{
+    cursor: pointer;
+}
+
 .icon_and_sum{
     display: flex;
     justify-content: center;
