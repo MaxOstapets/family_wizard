@@ -43,7 +43,7 @@ accept.addEventListener('click', () => {
 
         inputs.appendChild(new_span_warning)
 
-        console.log("Fuck you, and your email");
+        console.log("Wrong email");
     }else{ 
         const span_warning = document.querySelector('.wrong_email');
 
@@ -63,7 +63,7 @@ accept.addEventListener('click', () => {
 
         inputs.appendChild(new_span_warning)
 
-        console.log("Fuck you, and your password");
+        console.log("Wrong password");
     }else{
         const span_warning = document.querySelector('.wrong_password');
 
