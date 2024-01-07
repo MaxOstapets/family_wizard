@@ -1,0 +1,9 @@
+/* main settings */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../img/add_objectives/add_objectives_background.png");
+    background-size: cover;
+}
