@@ -46,3 +46,24 @@ a{
     color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+    body{
+        background: url("./img/header/tablet_background.svg");
+        background-repeat: no-repeat;
+    }
+
+    nav{
+        font-size: 15px;
+        gap: 100px;
+        margin-top: 30px;
+    }
+
+    .text{
+        margin-top: 160px;
+        gap: 15px;
+    }
+
+    h1{font-size: 50px;}
+    h2{font-size: 20px;}
+}

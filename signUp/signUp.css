@@ -58,17 +58,9 @@ input::placeholder{
     color: rgba(0, 66, 37, 0.5);
 }
 
-input:focus{
-    outline: 0;
-}
-
-input:focus::placeholder{
-    color: transparent;
-}
-
-.password{
-    margin-bottom: 50px;
-}
+input:focus{outline: 0;}
+input:focus::placeholder{color: transparent;}
+.password{margin-bottom: 50px;}
 
 .wrong_password, .wrong_email{
     font-family: "Fira Sans";
@@ -97,13 +89,8 @@ button{
     gap: 10px;
 }
 
-.with_google{
-    margin: 140px 0 20px 0;
-}
-
-.icons{
-    width: 30px;
-}
+.with_google{margin: 140px 0 20px 0;}
+.icons{width: 30px;}
 
 .descriptor{
     background: #FFB000;
@@ -120,9 +107,7 @@ button{
     margin-bottom: 10px;
 }
 
-.about{
-    margin-bottom: 20px;
-}
+.about{margin-bottom: 20px;}
 
 .list, .about{
     font-size: 25px;
@@ -134,9 +119,7 @@ button{
     width: 560px;
 }
 
-ol{
-    margin-left: 45px;
-}
+ol{margin-left: 45px;}
 
 a{
     text-decoration: none;
@@ -148,4 +131,54 @@ a{
     font-size: 60px;
     font-family: "Russo One";
     text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .sign_up_title{
+        font-size: 25px;
+        margin-bottom: 60px;
+        margin-left: 40px;
+    }
+
+    input{
+        width: 300px;
+        font-size: 15px;
+    }
+    
+    button{
+        width: 300px;
+        height: 50px;
+        font-size: 10px;
+    }
+    
+    .with_google, .with_facebook{
+        display: flex;
+        align-items: center;    
+        padding-left: 10px;
+        gap: 10px;
+    }
+    
+    .wrong_password, .wrong_email{
+        font-size: 15px;   
+        margin-bottom: 10px;
+    }
+    
+    input::placeholder{font-size: 10px;}
+    .with_google{margin: 140px 0 20px 0;}
+    .icons{width: 30px;}
+    .with_google{margin: 90px 0 20px 0;}
+    .about{margin-bottom: 20px;}
+    .list, .about{font-size: 15px;}
+    .descriptor_title{font-size: 30px;}
+
+    .content{
+        margin-left: 20px;
+        width: 360px;
+    }
+
+    .descriptor_title{
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
 }
