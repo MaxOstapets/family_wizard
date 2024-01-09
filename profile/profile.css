@@ -3,9 +3,7 @@
     padding: 0;
 }
 
-body{
-    background: #F5F5DC;
-}
+body{background: #F5F5DC;}
 
 /* NAV */
 nav{
@@ -13,7 +11,6 @@ nav{
     justify-content: space-around;
     align-items: center;
     background: #004225;
-    /* gap: 150px; */
     padding: 15px;
 }
 
@@ -26,18 +23,14 @@ ul{
     font-family: "M PLUS Rounded 1c";
 }
 
-li{
-    list-style: none;
-}
+li{list-style: none;}
 
 .icon, .account_icon{
     width: 65px;
     height: 65px;
 }
 
-main{
-    margin-top: 100px;
-}
+main{margin-top: 100px;}
 
 /* ACCOUNT */
 .account{
@@ -94,9 +87,7 @@ main{
     cursor: pointer;
 }
 
-.sum, .objectives_sum{
-    margin: 0 0 10px 0;
-}
+.sum, .objectives_sum{margin: 0 0 10px 0;}
 
 .titles{
     margin: 0 0 100px 0;
@@ -131,9 +122,7 @@ main{
     color: #004225;
 }
 
-.objective:hover{
-    cursor: pointer;
-}
+.objective:hover{cursor: pointer;}
 
 .icon_and_sum{
     display: flex;
@@ -141,9 +130,7 @@ main{
     align-items: center;
 }
 
-.text_objective{
-    padding: 10px;
-}
+.text_objective{padding: 10px;}
 
 .check_icon{
     width: 30px;
@@ -154,4 +141,49 @@ main{
 .nav_link{
     text-decoration: none;
     color: #F5F5DC;
+}
+
+@media screen and (max-width: 768px){
+    ul{
+        gap: 60px;
+        font-size: 15px;
+    }
+
+    .icon, .account_icon{
+        width: 65px;
+        height: 65px;
+    }
+
+    .info{
+        font-size: 15px;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .acc_photo{
+        width: 150px;
+        height: 150px;
+    }
+
+    .add_objectives, .delete_objectives, .edit_account{
+        width: 150px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .titles{
+        margin: 0 0 100px 0;
+        font-size: 20px;
+    }
+    
+    .objectives{
+        grid-template-columns: repeat(2, 320px);
+        grid-gap: 10px;
+        margin: 0 50px 100px 50px;
+    }
+    
+    main{margin-top: 60px;}
+    .account{margin: 0 50px 100px 50px;}
+    .acc_buttons{gap: 10px;}
+    .sum, .objectives_sum{margin: 0 0 10px 0;}
 }

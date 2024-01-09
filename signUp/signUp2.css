@@ -59,19 +59,6 @@ input:focus::placeholder{
     color: transparent;
 }
 
-.btn1{
-    width: 200px;
-    height: 50px;
-    border: 3px solid #004225;
-    background: #F5F5DC;
-    font-family: Jost;
-    font-weight: 500;
-    font-size: 20px;
-    border-radius: 10px;
-    color: #004225;
-    margin-top: 50px;
-}
-
 .objectives{
     width: 760px;
     height: 500px;
@@ -178,4 +165,13 @@ button{
 a{
     text-decoration: none;
     color: #004225;
+}
+
+@media screen and (max-width: 768px){
+    section{
+        grid-template-columns: repeat(2, 320px);
+        gap: 70px;        
+    }
+    
+    .objectives{width: 710px;}
 }
