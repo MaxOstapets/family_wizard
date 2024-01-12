@@ -7,6 +7,7 @@ body{
     background: url("./img/header/background.jpg");
     background-size: cover;
     color: white;
+    background-repeat: no-repeat;
 }
 
 nav{
@@ -47,7 +48,7 @@ a{
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px){
+@media(min-width: 768px) and (max-width: 1024px){
     body{
         background: url("./img/header/tablet_background.svg");
         background-repeat: no-repeat;
@@ -66,4 +67,25 @@ a{
 
     h1{font-size: 50px;}
     h2{font-size: 20px;}
+}
+
+@media(max-width: 767px){
+    body{
+        background: url("./img/header/mobile_background.svg");
+        background-repeat: no-repeat;
+    }
+
+    nav{
+        font-size: 15px;
+        gap: 45px;
+        margin-top: 25px;
+    }
+
+    .text{
+        margin-top: 220px;
+        gap: 15px;
+    }
+
+    h1{font-size: 40px;}
+    h2{font-size: 15px;}
 }

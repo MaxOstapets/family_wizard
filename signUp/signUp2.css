@@ -7,6 +7,7 @@ body{
     background: #F5F5DC;
     background-image: url('../img/signUp/Background.svg');
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 section{
@@ -28,6 +29,8 @@ section{
     margin-top: 100px;
 }
 
+input{background: rgba(0, 0, 0, 0);}
+
 .inp1{
     width: 200px;
     height: 50px;
@@ -35,7 +38,6 @@ section{
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    background: #F5F5DC;
     font-size: 20px;
     color: #004225;
     margin-bottom: 30px;
@@ -47,8 +49,8 @@ section{
     text-align: center;
     font-family: "Jost";
     font-weight: 500;
-    font-size: 25px;
-    color: rgba(0, 66, 37, 0.5);
+    font-size: 20px;
+    color: rgba(0, 66, 37, 0.7);
 }
 
 input:focus{
@@ -89,7 +91,6 @@ input:focus::placeholder{
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    background: #F5F5DC;
     font-size: 20px;
     color: #004225;
     font-family: "Jost";
@@ -100,7 +101,7 @@ input:focus::placeholder{
     font-family: "Jost";
     font-weight: 500;
     font-size: 20px;
-    color: rgba(0, 66, 37, 0.5);
+    color: rgba(0, 66, 37, 0.7);
 }
 
 
@@ -120,7 +121,6 @@ input:focus::placeholder{
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    background: #F5F5DC;
     font-size: 20px;
     color: #004225;
     font-family: "Jost";
@@ -129,6 +129,7 @@ input:focus::placeholder{
 
 .sum::placeholder{
     text-align: center;
+    color: rgba(0, 66, 37, 0.7);
 }
 
 .inp2, .sum{
@@ -167,11 +168,32 @@ a{
     color: #004225;
 }
 
-@media screen and (max-width: 768px){
+@media (min-width: 768px) and (max-width: 1024px){
     section{
         grid-template-columns: repeat(2, 320px);
         gap: 70px;        
     }
     
     .objectives{width: 710px;}
+}
+
+@media (max-width: 767px){
+    body{
+        background: url("../img/signUp/mobile_background.svg");
+        background-repeat: no-repeat;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 25px;
+    }
+
+    .names, .salaries {margin-top: 50px;}
+
+    .objectives{
+        width: 350px;
+        margin: 70px auto;
+    }
+    
 }
