@@ -21,9 +21,7 @@ const objectives_sum = document.querySelector('.objectives_sum')
 
 //AVERAGE EXPENSE && OBJECTIVES SUM------------------------------------------------------------------
 function average_expense_calc(){
-    for (let i = 0; i < sum_array.length; i++) {
-        sum_number += sum_array[i]
-    }
+    for (let i = 0; i < sum_array.length; i++){sum_number += sum_array[i]}
     
     let average_expense_num = sum_number / sum_array.length
     console.log("Average expense:", Math.floor(average_expense_num));
@@ -35,15 +33,15 @@ function average_expense_calc(){
 function date_fix(){
     const date = new Date ()
     const month = date.getMonth()
-    console.log("Місяць:", month);
+    console.log("Month:", month);
 }
 
-//CREATE DIV WITH OBJECTIVES------------------------------------------------------------------
+//CREATE AND DELETE DIV WITH OBJECTIVES------------------------------------------------------------------
 const main = document.querySelector('main')
 const objectives_div = document.createElement('div')
 objectives_div.classList.add('objectives')
 
-function create_div_objective(e) {
+function create_div_objective(e){
     const objective_div = document.createElement('div')
     const text_objective = document.createElement('span')
     const icon_and_sum = document.createElement('div')
@@ -60,28 +58,42 @@ function create_div_objective(e) {
     icon_and_sum.append(sum_objective, check_icon)
     main.append(objectives_div)
 
+    function delete_div(){
+        const array_length = information_objectives.length
+        const array_index = information_objectives.indexOf(objective_div)
+        information_objectives.splice(array_index)
+        localStorage.setItem('information_objectives', JSON.stringify(information_objectives))
+        console.log("Array length:", array_length)
+        check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
+        objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
+    }
+    
     text_objective.innerText = e.user_objective
     sum_objective.innerText = e.user_sum
     check_icon.setAttribute('src', '../img/profile/check_icon.png')
-
+    
     objectives_div.appendChild(objective_div)
+    
+    // localStorage.setItem('objective_div', JSON.stringify(objective_div))
+    // const get_storage = localStorage.getItem('objective_div')
+    // const parse_storage = JSON.parse(get_storage)
+    // console.log(parse_storage);
+    // localStorage.removeItem('objective_div')
 
     sum_array.push(e.user_sum)
-
+    
     objective_div.addEventListener('click', ()=>{
         let minus_sum_number = sum_number - e.user_sum
         sum_number = minus_sum_number
-
+        
         let minus_sum_salarie = title_salarie - e.user_sum
         title_salarie = minus_sum_salarie
-
+        
         objectives_sum.innerText = `Сума витрат: ${minus_sum_number} грн.`
-        check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
         sum.innerText = `Загальна сума: ${minus_sum_salarie} грн.`
 
-        objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
-
         date_fix()
+        delete_div()
     })
 }
 
@@ -91,8 +103,8 @@ woman_name_salarie.innerText = `${information_users.woman_name}: зарплат�
 total_salarie_sum.innerText = `Сума зарплат разом: ${total_sum} грн.`
 sum.innerText = `Загальна сума: ${title_salarie} грн.`
 
+//FUNCTIONS CALL
 function create_objective(){information_objectives.forEach((e) => create_div_objective(e))}
-
 create_objective()
 average_expense_calc(sum_array) 
 
