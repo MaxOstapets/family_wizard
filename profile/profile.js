@@ -73,12 +73,6 @@ function create_div_objective(e){
     check_icon.setAttribute('src', '../img/profile/check_icon.png')
     
     objectives_div.appendChild(objective_div)
-    
-    // localStorage.setItem('objective_div', JSON.stringify(objective_div))
-    // const get_storage = localStorage.getItem('objective_div')
-    // const parse_storage = JSON.parse(get_storage)
-    // console.log(parse_storage);
-    // localStorage.removeItem('objective_div')
 
     sum_array.push(e.user_sum)
     
