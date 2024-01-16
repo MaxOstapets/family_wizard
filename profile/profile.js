@@ -29,13 +29,6 @@ function average_expense_calc(){
     objectives_sum.innerText = `Сума витрат: ${sum_number} грн.`
 }
 
-//DATE FUNCTION------------------------------------------------------------------
-function date_fix(){
-    const date = new Date ()
-    const month = date.getMonth()
-    console.log("Month:", month);
-}
-
 //CREATE AND DELETE DIV WITH OBJECTIVES------------------------------------------------------------------
 const main = document.querySelector('main')
 const objectives_div = document.createElement('div')
@@ -63,7 +56,6 @@ function create_div_objective(e){
         const array_index = information_objectives.indexOf(objective_div)
         information_objectives.splice(array_index)
         localStorage.setItem('information_objectives', JSON.stringify(information_objectives))
-        console.log("Array length:", array_length)
         check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
         objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
     }
@@ -86,7 +78,6 @@ function create_div_objective(e){
         objectives_sum.innerText = `Сума витрат: ${minus_sum_number} грн.`
         sum.innerText = `Загальна сума: ${minus_sum_salarie} грн.`
 
-        date_fix()
         delete_div()
     })
 }
