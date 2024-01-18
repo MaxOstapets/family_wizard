@@ -5,6 +5,8 @@
 
 body{background: #F5F5DC;}
 
+a{text-decoration: none;}
+
 /* NAV */
 nav{
     display: flex;
@@ -82,6 +84,8 @@ main{margin-top: 100px;}
     transition: .1s;
 }
 
+.btn_link{color: #004225;}
+
 .add_objectives:hover, .delete_objectives:hover, .edit_account:hover{
     scale: 1.1;
     cursor: pointer;
@@ -143,7 +147,6 @@ main{margin-top: 100px;}
     color: #F5F5DC;
 }
 
-a{text-decoration: none;}
 
 /* MEDIA */
 @media (min-width: 768px) and (max-width: 1024px){

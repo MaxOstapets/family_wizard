@@ -9,10 +9,7 @@ body{
     background-size: cover;
 }
 
-nav{
-    display: flex;
-    margin: 50px 0 0 150px;
-}
+img{margin: 50px 0 0 150px;}
 
 section{
     display: grid;
@@ -30,7 +27,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .inp1{
@@ -76,7 +73,8 @@ input:focus::placeholder{
     color: #004225;
     margin-top: 100px;
 }
-.accept{
+
+.accept, button{
     width: 200px;
     height: 50px;
     background:#F5F5DC;
