@@ -20,6 +20,7 @@ const sums = []
 const check = /[a-zA-Zа-яА-Я,./*+?^${}()]/
           
 let sum_salaries = 0
+let title_sum_salarie = 0
 
 //SALARIE CHECK-------------------------------------
 function salarie_check(){
@@ -32,6 +33,7 @@ function salarie_check(){
     users_object.woman_salarie = woman_salarie_val
 
     sum_salaries = man_salarie_val + woman_salarie_val
+    title_sum_salarie = man_salarie_val + woman_salarie_val
 
     salarie.forEach((el) => el.style.cssText = 'border-bottom: 3px solid #004225; color: #004225')
 }
@@ -65,10 +67,12 @@ accept.addEventListener('click', ()=>{
         users_obj_and_sum.user_sum = sums[i]        
         users_objectives.push(users_obj_and_sum)
     }
+
     console.log(users_objectives);
     console.log(sum_salaries);
     localStorage.setItem('information_objectives', JSON.stringify(users_objectives))
     localStorage.setItem('information_users', JSON.stringify(users_object))
     localStorage.setItem('total_sum', JSON.stringify(sum_salaries))
+    localStorage.setItem('title_sum_salarie', JSON.stringify(title_sum_salarie))
     document.querySelector('.next_page').setAttribute('href', '../profile/profile.html')
 })
