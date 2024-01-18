@@ -35,12 +35,6 @@ const main = document.querySelector('main')
 const objectives_div = document.createElement('div')
 objectives_div.classList.add('objectives')
 
-// let objective_div
-// let text_objective
-// let icon_and_sum
-// let sum_objective
-// let check_icon
-
 sum.innerText = `Загальна сума: ${title_sum_salarie} грн.`
 
 function create_div_objective(e){
