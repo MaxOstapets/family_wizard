@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         Array.from(outputElements).forEach((outputElement, index) => {
             if (information_objectives && information_objectives[index]) {
                 const { user_objective, user_sum } = information_objectives[index];
-                const displayText = `${user_objective} - ${user_sum}`;
+                const displayText = `${user_objective} - ${user_sum}грн`;
                 outputElement.textContent = displayText;
                 console.log(displayText);
             } else {
