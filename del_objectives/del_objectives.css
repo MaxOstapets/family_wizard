@@ -1,15 +1,55 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-image: url(../img/del_objectives/Background\ \(1\).png);
+body {
+    background-image: url(../img/del_objectives/del_objectives_background.png);
     background-size: cover;
 }
 
-nav{
+nav {
     display: flex;
     margin: 50px 0 0 150px;
 }
+
 /* main */
+
+.delete_first_object, .delete_second_object, .delete_third_object {
+    width: 250px;
+    padding: 15px;
+    background: #F5F5DC;
+    border: 3px solid #004225;
+    font-size: 15px;
+    font-family: Jost;
+    color: #004225;
+    border-radius: 12px;
+    transition: .1s;
+}
+
+.delete_first_object:hover, .delete_second_object:hover, .delete_third_object:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.container{
+    width: 760px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #004225;
+    border-radius: 12px;
+    gap: 20px;
+    margin: 100px auto;
+}
+
+.stroke{
+    display: flex;
+    justify-content: space-between;
+}
+
+.acc_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
