@@ -15,7 +15,7 @@ nav {
 
 /* main */
 
-.delete_first_object, .delete_second_object, .delete_third_object {
+.delete_object {
     width: 250px;
     padding: 15px;
     background: #F5F5DC;
@@ -27,16 +27,17 @@ nav {
     transition: .1s;
 }
 
-.delete_first_object:hover, .delete_second_object:hover, .delete_third_object:hover {
+.delete_object:hover, .accept_button:hover{
     scale: 1.1;
     cursor: pointer;
 }
 
 .container{
-    width: 760px;
+    width: 820px;
     height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     border: 5px solid #004225;
     border-radius: 12px;
     gap: 20px;
@@ -44,12 +45,38 @@ nav {
 }
 
 .stroke{
+    text-align: left;
     display: flex;
     justify-content: space-between;
 }
 
-.acc_buttons{
+.accept_button{
+
+    width: 250px;
+    height: 58px;
+    padding: 15px;
+    background: #004225;
+    border: 3px solid #004225;
+    font-size: 15px;
+    font-family: Jost;
+    color: #F5F5DC;
+    border-radius: 12px;
+    transition: .1s;
+}
+
+.accept_stroke{
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
+}
+
+.object_title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #004225;
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 20px;
+    padding: 30px;
 }
