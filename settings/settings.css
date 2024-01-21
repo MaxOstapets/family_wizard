@@ -4,12 +4,12 @@
 }
 
 body{
-    background: #F5F5DC;
-    background-image: url('../img/settings/Background\ \(1\).png');
+    background: url('../img/settings/Background\ \(1\).png');
     background-size: cover;
 }
 
 img{margin: 50px 0 0 150px;}
+input{background: rgba(255, 255, 255, 0);}
 
 section{
     display: grid;
@@ -37,7 +37,6 @@ section{
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    background: #F5F5DC;
     font-size: 20px;
     color: #004225;
     margin-bottom: 30px;
@@ -53,13 +52,9 @@ section{
     color: rgba(0, 66, 37, 0.5);
 }
 
-input:focus{
-    outline: 0;
-}
+input:focus{outline: 0;}
 
-input:focus::placeholder{
-    color: transparent;
-}
+input:focus::placeholder{color: transparent;}
 
 .btn1{
     width: 200px;
@@ -84,4 +79,35 @@ input:focus::placeholder{
     border-radius: 6px;
     font-family: "Jost";
     font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    body{
+        background: url('../img/add_objectives/tablet_background.svg');
+        background-size: cover;
+    }
+
+    section{
+        grid-template-columns: repeat(2, 320px);
+        gap: 70px;        
+    }    
+
+    img{margin: 20px 0 0 40px;}
+}
+
+@media (max-width: 767px){
+    body{
+        background: url("../img/signUp/mobile_background.svg");
+        background-repeat: no-repeat;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 25px;
+    }
+
+    .names, .salaries {margin-top: 50px;}
+
+    img{margin: 20px 0 0 40px;}
 }
