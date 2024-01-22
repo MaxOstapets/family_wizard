@@ -99,7 +99,7 @@ main{
 }
 
 @media (max-width: 767px){
-    body {background-image: url('../img/del_objectives/background_mobile.svg'); background-repeat: no-repeat;}
+    body {background-image: url('../img/signUp/mobile_background.svg')}
     
     img{
         margin: 10px 0 0 20px;
