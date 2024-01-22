@@ -8,7 +8,7 @@ body{
     background-size: cover;
 }
 
-img{margin: 50px 0 0 150px;}
+img{margin: 50px 0 0 140px;}
 input{background: rgba(255, 255, 255, 0);}
 
 section{
@@ -109,5 +109,8 @@ input:focus::placeholder{color: transparent;}
 
     .names, .salaries {margin-top: 50px;}
 
-    img{margin: 20px 0 0 40px;}
+    img{
+        margin: 20px 0 0 40px;
+        width: 50px;
+    }
 }

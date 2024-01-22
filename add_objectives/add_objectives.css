@@ -136,7 +136,10 @@ a{
 }
 
 @media (max-width: 767px){
-    img{margin: 10px 0 0 20px;}
+    img{
+        margin: 10px 0 0 20px;
+        width: 50px;
+    }
 
     body{
         background: url("../img/signUp/mobile_background.svg");

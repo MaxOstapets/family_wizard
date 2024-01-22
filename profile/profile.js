@@ -54,15 +54,20 @@ function create_div_objective(e){
     icon_and_sum.append(sum_objective, check_icon)
     main.append(objectives_div)
 
-    function delete_div(){
-        const array_length = information_objectives.length
-        const array_index = information_objectives.indexOf(objective_div)
-        information_objectives.splice(array_index, 1)
-        localStorage.setItem('information_objectives', JSON.stringify(information_objectives))
-        console.log("Array length:", array_length)
-        
-        check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
-        objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
+    function delete_div() {
+        const uniqueIdentifier = `${e.user_objective}-${e.user_sum}`;
+        const array_index = information_objectives.findIndex(item => {
+            const itemIdentifier = `${item.user_objective}-${item.user_sum}`
+            return itemIdentifier === uniqueIdentifier
+        })
+
+        if (array_index !== -1) {
+            information_objectives.splice(array_index, 1)
+            localStorage.setItem('information_objectives', JSON.stringify(information_objectives))
+            console.log("Array length:", information_objectives.length)
+            check_icon.setAttribute('src', '../img/profile/checked_elipse.png')
+            objective_div.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78); border: 3px solid rgb(78, 78, 78);'
+        }
     }
     
     function minus_number(){

@@ -1,48 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let information_objectives = JSON.parse(localStorage.getItem('information_objectives'));
-    let outputElements = document.getElementsByClassName('object_title');
-    let deleteObjects = document.getElementsByClassName('delete_object');
+const information_objectives = JSON.parse(localStorage.getItem('information_objectives'))
+const main = document.querySelector('main')
+const container = document.createElement('div')
 
-    console.log(information_objectives);
+function create_objective_div(e){
+    const stroke = document.createElement('div')
+    const object_title = document.createElement('span')
+    const delete_object = document.createElement('button')
+        
+    stroke.classList.add('stroke')
+    object_title.classList.add('object_title')
+    delete_object.classList.add('delete_object')
+    container.classList.add('container')
+    
+    stroke.append(object_title, delete_object)
+    container.append(stroke)
+    main.insertBefore(container, main.firstChild)
+    
+    object_title.innerText = `${e.user_objective} - ${e.user_sum} грн.`
+    delete_object.innerText = 'Видалити'
 
-    // Додати обробник подій для кожної кнопки delete_object
-    Array.from(deleteObjects).forEach((deleteObject, index) => {
-        deleteObject.addEventListener('click', function () {
-            // Визначити індекс кнопки delete_object, яка була натискана
-            const buttonIndex = Array.from(deleteObjects).indexOf(deleteObject);
+    delete_object.addEventListener('click', () => {
+        const array_index = information_objectives.findIndex(item => item.user_objective === e.user_objective && item.user_sum === e.user_sum)
 
-            // Перевірити, чи індекс дійсний
-            if (buttonIndex !== -1) {
-                // Видалити елементи з індексом buttonIndex
-                information_objectives.splice(buttonIndex, 1);
-
-                // Оновити localStorage
-                localStorage.setItem('information_objectives', JSON.stringify(information_objectives));
-
-                // Видалити елемент та його батьківський елемент (кнопку)
-                deleteObject.parentNode.remove();
-
-                console.log('Елемент та кнопка успішно видалені з localStorage');
-            } else {
-                console.log('Помилка: Невірний індекс кнопки delete_object');
-            }
-        });
+        if(array_index !== -1){
+            information_objectives.splice(array_index, 1);
+            localStorage.setItem('information_objectives', JSON.stringify(information_objectives))
+            console.log("element delete, Array length:", information_objectives.length)
+            object_title.style.cssText = 'text-decoration: line-through; color: rgb(78, 78, 78);'
+        }else{
+            console.error('Error')
+        }
     });
+}
 
-    // Функція для оновлення відображення на сторінці
-    function updateDisplay() {
-        Array.from(outputElements).forEach((outputElement, index) => {
-            if (information_objectives && information_objectives[index]) {
-                const { user_objective, user_sum } = information_objectives[index];
-                const displayText = `${user_objective} - ${user_sum}грн`;
-                outputElement.textContent = displayText;
-                console.log(displayText);
-            } else {
-                outputElement.textContent = '';
-            }
-        });
-    }
-
-    // Вивести інформацію при завантаженні сторінки
-    updateDisplay();
-});
+function create() {information_objectives.forEach((e)=>{create_objective_div(e)})}
+create()
