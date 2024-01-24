@@ -1,48 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
     let information_objectives = JSON.parse(localStorage.getItem('information_objectives'));
-    let outputElements = document.getElementsByClassName('object_title');
-    let deleteObjects = document.getElementsByClassName('delete_object');
+    let outputContainer = document.querySelector('.stroke');
 
     console.log(information_objectives);
 
-    // Додати обробник подій для кожної кнопки delete_object
-    Array.from(deleteObjects).forEach((deleteObject, index) => {
-        deleteObject.addEventListener('click', function () {
-            // Визначити індекс кнопки delete_object, яка була натискана
-            const buttonIndex = Array.from(deleteObjects).indexOf(deleteObject);
+    if (information_objectives && information_objectives.length > 0) {
+        information_objectives.forEach((objective, index) => {
+            // Create container div for each pair of text and button
+            let rowContainer = document.createElement('div');
+            rowContainer.className = 'row-container';
 
-            // Перевірити, чи індекс дійсний
-            if (buttonIndex !== -1) {
-                // Видалити елементи з індексом buttonIndex
-                information_objectives.splice(buttonIndex, 1);
+            let contentElement = document.createElement('div');
+            contentElement.className = 'object_title';
 
-                // Оновити localStorage
+            let deleteButton = document.createElement('button');
+            deleteButton.className = 'delete_object';
+            deleteButton.textContent = 'Видалити';
+
+            deleteButton.addEventListener('click', function () {
+                information_objectives.splice(index, 1);
+
                 localStorage.setItem('information_objectives', JSON.stringify(information_objectives));
 
-                // Видалити елемент та його батьківський елемент (кнопку)
-                deleteObject.parentNode.remove();
+                rowContainer.parentNode.removeChild(rowContainer);
 
-                console.log('Елемент та кнопка успішно видалені з localStorage');
-            } else {
-                console.log('Помилка: Невірний індекс кнопки delete_object');
-            }
-        });
-    });
+                console.log('Element and button successfully removed from localStorage');
+            });
 
-    // Функція для оновлення відображення на сторінці
-    function updateDisplay() {
-        Array.from(outputElements).forEach((outputElement, index) => {
-            if (information_objectives && information_objectives[index]) {
-                const { user_objective, user_sum } = information_objectives[index];
-                const displayText = `${user_objective} - ${user_sum}грн`;
-                outputElement.textContent = displayText;
-                console.log(displayText);
-            } else {
-                outputElement.textContent = '';
-            }
+            rowContainer.appendChild(contentElement);
+            rowContainer.appendChild(deleteButton);
+            outputContainer.appendChild(rowContainer);
+
+            updateDisplay(contentElement, objective);
         });
+    } else {
+        alert('Data is missing in localStorage');
+        window.location.href = '../profile/profile.html';
     }
 
-    // Вивести інформацію при завантаженні сторінки
-    updateDisplay();
+    function updateDisplay(outputElement, objective) {
+        const { user_objective, user_sum } = objective;
+        const displayText = `${user_objective} - ${user_sum}грн`;
+        outputElement.textContent = displayText;
+        console.log(displayText);
+    }
 });
