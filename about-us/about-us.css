@@ -163,40 +163,59 @@ h2 {
 }
 
 /* adaptation for phones */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
-        line-height: 36px;
-    }
-
-    ul {
-        gap: 20px;
-    }
-
-    .logo,
-    .account-logo {
-        width: 40px;
-        height: 40px;
-    }
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        margin-top: 30px;
+        padding: 5%;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 60px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     h3 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     h4 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+/* Phone Styles */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10%;
+    }
+
+    h1 {
         font-size: 40px;
         line-height: 48px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 36px;
+        line-height: 42px;
     }
 }
