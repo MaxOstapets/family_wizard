@@ -161,3 +161,42 @@ h2 {
     text-align: left;
     color: #004225;
 }
+
+/* adaptation for phones */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    .logo,
+    .account-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container {
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}

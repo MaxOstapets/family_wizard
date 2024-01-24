@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
             rowContainer.appendChild(deleteButton);
             outputContainer.appendChild(rowContainer);
 
-            updateDisplay(contentElement, objective);
+            updateDisplay(contentElement, deleteButton, objective);
         });
     } else {
         alert('Data is missing in localStorage');
         window.location.href = '../profile/profile.html';
     }
 
-    function updateDisplay(outputElement, objective) {
+    function updateDisplay(outputElement, buttonElement, objective) {
         const { user_objective, user_sum } = objective;
         const displayText = `${user_objective} - ${user_sum}грн`;
         outputElement.textContent = displayText;

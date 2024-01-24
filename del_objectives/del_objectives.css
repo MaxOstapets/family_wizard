@@ -8,12 +8,15 @@ body {
     background-size: cover;
 }
 
-img{margin: 20px 0 0 140px;}
+img{
+    margin: 20px 0 0 140px;
+}
 
 /* main */
 .delete_object {
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    align-items: center;  
     width: 250px;
     height: 60px;
     background: #F5F5DC;
@@ -23,7 +26,7 @@ img{margin: 20px 0 0 140px;}
     color: #004225;
     border-radius: 12px;
     transition: .1s;
-    margin-left: auto; /* Змінено, щоб кнопка була справа */
+    margin-left: auto;
 }
 
 .delete_object:hover, .accept_button:hover{
@@ -44,27 +47,15 @@ main{
 
 .row-container {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
+    align-items: center;
 }
 
 .stroke{
     margin: 50px 50px 0px 50px;
     display: flex;
-    align-items: center;
+    gap: 20px;
     justify-content: space-between;
     flex-direction: column;
-}
-
-.output_container{
-    /* margin: 50px 50px 0px 50px; */
-    text-align: left;
-    display: flex;
-    align-items:baseline;
-    flex-direction: column;
-}
-
-button{
-    align-items: flex-end;
 }
 
 .accept_button{
@@ -89,7 +80,7 @@ button{
 .object_title {
     flex: 1;
     display: flex;
-    align-items: center; /* Вирівнювання тексту по вертикалі по центру */
+    align-items: center;
     color: #004225;
     font-family: Mulish;
     font-weight: 600;
