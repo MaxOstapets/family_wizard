@@ -15,11 +15,22 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 100px;
     font-family: "M PLUS Rounded 1c";
     font-size: 20px;
     margin-top: 20px;
 }
+
+li{list-style: none;}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+img{width: 65px;}
 
 .text{
     display: flex;
@@ -77,9 +88,16 @@ a{
 
     nav{
         font-size: 15px;
-        gap: 45px;
+        gap: 30px;
         margin-top: 25px;
     }
+
+    ul{
+        font-size: 10px;
+        gap: 45px;
+    }
+
+    img{width: 30px;}
 
     .text{
         margin-top: 220px;

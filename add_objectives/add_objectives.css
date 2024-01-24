@@ -4,14 +4,13 @@
     margin: 0;
 }
 body{
-    background-image: url("../img/add_objectives/add_objectives_background.png");
+    background-image: url("../img/add_objectives/background.svg");
     background-size: cover;
 }
 
+input{background: rgba(255, 255, 255, 0)}
 input:focus{outline: 0;}
-
 input:focus::placeholder{color: transparent;}
-
 img{margin: 50px 0 0 140px;}
 
 .objectives{
@@ -56,7 +55,6 @@ img{margin: 50px 0 0 140px;}
     font-size: 20px;
     color: rgba(0, 66, 37, 0.7);
 }
-
 
 .objective{
     display: flex;
@@ -122,15 +120,27 @@ a{
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
+    img{margin: 10px 0 0 20px;}
+    
     section{
         grid-template-columns: repeat(2, 320px);
         gap: 70px;        
     }
     
     .objectives{width: 710px;}
+
+    body{
+        background: url("../img/add_objectives/tablet_background.svg");
+        background-repeat: no-repeat;
+    }
 }
 
 @media (max-width: 767px){
+    img{
+        margin: 10px 0 0 20px;
+        width: 50px;
+    }
+
     body{
         background: url("../img/signUp/mobile_background.svg");
         background-repeat: no-repeat;
@@ -142,11 +152,9 @@ a{
         gap: 25px;
     }
 
-    .names, .salaries {margin-top: 50px;}
-
     .objectives{
         width: 350px;
-        margin: 70px auto;
+        margin: 30px auto;
     }
     
 }
