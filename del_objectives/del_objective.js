@@ -16,7 +16,7 @@ function create_objective_div(e){
     container.append(stroke)
     main.insertBefore(container, main.firstChild)
 
-    object_title.innerText = `${e.user_objective} - ${e.user_sum} грн.`
+    object_title.innerText = `${information_objectives.user_objective} - ${information_objectives.user_sum} грн.`
     delete_object.innerText = 'Видалити'
 
     delete_object.addEventListener('click', () => {
@@ -32,3 +32,5 @@ function create_objective_div(e){
         }
     });
 }
+
+create_objective_div()
