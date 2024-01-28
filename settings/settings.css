@@ -10,6 +10,7 @@ body{
 
 img{margin: 50px 0 0 140px;}
 input{background: rgba(255, 255, 255, 0);}
+button:hover{cursor: pointer;}
 
 section{
     display: grid;

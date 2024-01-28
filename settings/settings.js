@@ -15,6 +15,13 @@ const check = /[a-zA-Zа-яА-Я,./*+?^${}()]/
 let sum_salaries = 0
 let title_sum_salarie = 0
 
+const users_str = localStorage.getItem('information_users')
+const users = JSON.parse(users_str)
+man_name.value = `${users.man_name}` 
+woman_name.value = `${users.woman_name}`
+man_salarie.value = `${users.man_salarie}`
+woman_salarie.value = `${users.woman_salarie}`
+
 //SALARIE CHECK-------------------------------------
 function salarie_check(){
     const man_salarie_val = parseFloat(man_salarie.value)
