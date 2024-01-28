@@ -9,7 +9,7 @@ section{
     height: 100vh;
 }
 
-.sign_up{
+.signUp{
     background: #F5F5DC;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ section{
     flex-direction: column;
 }
 
-.sign_up_title{
+.signUpTitle{
     color: #004225;
     font-size: 45px;
     font-family: "Fira Sans";
@@ -62,7 +62,7 @@ input:focus{outline: 0;}
 input:focus::placeholder{color: transparent;}
 .password{margin-bottom: 50px;}
 
-.wrong_password, .wrong_email{
+.wrongPassword, .wrongEmail{
     font-family: "Fira Sans";
     color: red;
     font-size: 20px;   
@@ -82,14 +82,14 @@ button{
     cursor: pointer;
 }
 
-.with_google, .with_facebook{
+.withGoogle, .withFacebook{
     display: flex;
     align-items: center;    
     padding-left: 10px;
     gap: 10px;
 }
 
-.with_google{margin: 140px 0 20px 0;}
+.withGoogle{margin: 140px 0 20px 0;}
 .icons{width: 30px;}
 
 .descriptor{
@@ -101,13 +101,13 @@ button{
     flex-direction: column;
 }
 
-.descriptor_title{
+.descriptorTitle{
     font-weight: 600;
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.about{margin-bottom: 20px;}
+about{margin-bottom: 20px;}
 
 .list, .about{
     font-size: 25px;
@@ -119,109 +119,51 @@ button{
     width: 560px;
 }
 
-ol{margin-left: 45px;}
-
-a{
-    text-decoration: none;
-    color: #004225;
-}
-
-.descriptor_title_sign_in{
-    width: 500px;
-    font-size: 60px;
-    font-family: "Russo One";
-    text-align: center;
-}
-
-@media (min-width: 768px) and (max-width: 1024px){
-    .sign_up_title{
-        font-size: 25px;
-        margin-bottom: 60px;
-        margin-left: 40px;
-    }
-
-    input{
-        width: 300px;
-        font-size: 15px;
-    }
-    
-    button{
-        width: 300px;
-        height: 50px;
-        font-size: 10px;
-    }
-    
-    .with_google, .with_facebook{
-        display: flex;
-        align-items: center;    
-        padding-left: 10px;
-        gap: 10px;
-    }
-    
-    .wrong_password, .wrong_email{
-        font-size: 15px;   
-        margin-bottom: 10px;
-    }
-    
-    input::placeholder{font-size: 10px;}
-    .with_google{margin: 140px 0 20px 0;}
-    .icons{width: 30px;}
-    .with_google{margin: 90px 0 20px 0;}
-    .about{margin-bottom: 20px;}
-    .list, .about{font-size: 15px;}
-    .descriptor_title{font-size: 30px;}
-
-    .content{
-        margin-left: 20px;
-        width: 360px;
-    }
-
-    .descriptor_title{
-        font-weight: 600;
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
+.descriptorTitle{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 767px){
-    section{
-        display: grid;
-        grid-template-columns: repeat(1, 100%);
-        height: 100vh;
-    }
+section{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    height: 100vh;
+}
 
-    .sign_up_title{
-        font-size: 25px;
-        margin-bottom: 60px;
-        margin-left: 60px;
-    }
+.signUpTitle{
+    font-size: 25px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
 
-    input{
-        width: 300px;
-        font-size: 15px;
-    }
-    
-    button{
-        width: 300px;
-        height: 50px;
-        font-size: 10px;
-    }
-    
-    .with_google, .with_facebook{
-        display: flex;
-        align-items: center;    
-        padding-left: 10px;
-        gap: 10px;
-    }
-    
-    .wrong_password, .wrong_email{
-        font-size: 15px;   
-        margin-bottom: 10px;
-    }
-    
-    input::placeholder{font-size: 10px;}
-    .with_google{margin: 140px 0 20px 0;}
-    .icons{width: 30px;}
-    .with_google{margin: 90px 0 20px 0;}
-    .descriptor{display: none;}
+input{
+    width: 300px;
+    font-size: 15px;
+}
+
+button{
+    width: 300px;
+    height: 50px;
+    font-size: 10px;
+}
+
+.withGoogle, .withFacebook{
+    display: flex;
+    align-items: center;    
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.wrongPassword, .wrongEmail{
+    font-size: 15px;   
+    margin-bottom: 10px;
+}
+
+input::placeholder{font-size: 10px;}
+.withGoogle{margin: 140px 0 20px 0;}
+.icons{width: 30px;}
+.withGoogle{margin: 90px 0 20px 0;}
+descriptor{display: none;}
 }

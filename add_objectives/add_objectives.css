@@ -130,7 +130,7 @@ a{
     .objectives{width: 710px;}
 
     body{
-        background: url("../img/add_objectives/tablet_background.svg");
+        background: url("../img/add_objectives/tabletBackground.svg");
         background-repeat: no-repeat;
     }
 }
@@ -142,7 +142,7 @@ a{
     }
 
     body{
-        background: url("../img/signUp/mobile_background.svg");
+        background: url("../img/signUp/mobileBackground.svg");
         background-repeat: no-repeat;
     }
 

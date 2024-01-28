@@ -1,18 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background: url('../img/settings/background.svg');
     background-size: cover;
 }
 
-img{margin: 50px 0 0 140px;}
-input{background: rgba(255, 255, 255, 0);}
-button:hover{cursor: pointer;}
+img {
+    margin: 50px 0 0 140px;
+}
 
-section{
+input {
+    background: rgba(255, 255, 255, 0);
+}
+
+section {
     display: grid;
     grid-template-columns: repeat(2, 380px);
     gap: 100px;
@@ -20,10 +24,10 @@ section{
     align-items: center;
 }
 
-.names, .salaries{
+.names, .salaries {
     height: 430px;
     border: 5px solid #004225;
-    border-radius: 12px;    
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +35,7 @@ section{
     margin-top: 50px;
 }
 
-.inp1{
+.inp1 {
     width: 200px;
     height: 50px;
     border: 3px solid #004225;
@@ -45,7 +49,7 @@ section{
     font-weight: 500;
 }
 
-.inp1::placeholder{
+.inp1::placeholder {
     text-align: center;
     font-family: "Jost";
     font-weight: 500;
@@ -53,11 +57,15 @@ section{
     color: rgba(0, 66, 37, 0.5);
 }
 
-input:focus{outline: 0;}
+input:focus {
+    outline: 0;
+}
 
-input:focus::placeholder{color: transparent;}
+input:focus::placeholder {
+    color: transparent;
+}
 
-.btn1{
+.btn1 {
     width: 200px;
     height: 50px;
     border: 3px solid #004225;
@@ -70,10 +78,10 @@ input:focus::placeholder{color: transparent;}
     margin-top: 100px;
 }
 
-.accept, button{
+.accept, button {
     width: 200px;
     height: 50px;
-    background:#F5F5DC;
+    background: #F5F5DC;
     border: 3px solid #004225;
     color: #004225;
     font-size: 15px;
@@ -82,35 +90,39 @@ input:focus::placeholder{color: transparent;}
     font-weight: 500;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    body{
-        background: url('../img/add_objectives/tablet_background.svg');
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background: url('../img/add_objectives/tabletBackground.svg');
         background-size: cover;
     }
 
-    section{
+    section {
         grid-template-columns: repeat(2, 320px);
-        gap: 70px;        
-    }    
+        gap: 70px;
+    }
 
-    img{margin: 20px 0 0 40px;}
+    img {
+        margin: 20px 0 0 40px;
+    }
 }
 
-@media (max-width: 767px){
-    body{
-        background: url("../img/signUp/mobile_background.svg");
+@media (max-width: 767px) {
+    body {
+        background: url("../img/signUp/mobileBackground.svg");
         background-repeat: no-repeat;
     }
 
-    section{
+    section {
         display: grid;
         grid-template-columns: repeat(1, 350px);
         gap: 25px;
     }
 
-    .names, .salaries {margin-top: 50px;}
+    .names, .salaries {
+        margin-top: 50px;
+    }
 
-    img{
+    img {
         margin: 20px 0 0 40px;
         width: 50px;
     }

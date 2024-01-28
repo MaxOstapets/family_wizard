@@ -1,78 +1,88 @@
-const man_name = document.querySelector('.man_name')
-const woman_name = document.querySelector('.woman_name')
+const manName = document.querySelector('.manName');
+const womanName = document.querySelector('.womanName');
 
-const man_salarie = document.querySelector('.man_salarie')
-const woman_salarie = document.querySelector('.woman_salarie')
-const salarie = document.querySelectorAll('.salarie')
+const manSalarie = document.querySelector('.manSalarie');
+const womanSalarie = document.querySelector('.womanSalarie');
+const salarie = document.querySelectorAll('.salarie');
 
-const users_object = {}
+const usersObject = {};
 
-const accept = document.querySelector('.accept')
-const next_page = document.querySelector('.next_page')
+const accept = document.querySelector('.accept');
+const nextPage = document.querySelector('.nextPage');
 
-const objective = document.querySelectorAll('.inp2')
-const sum = document.querySelectorAll('.sum')
+const objective = document.querySelectorAll('.inp2');
+const sum = document.querySelectorAll('.sum');
 
-const users_objectives = []
-const objectives = []
-const sums = []
+const usersObjectives = [];
+const objectives = [];
+const sums = [];
 
-const check = /[a-zA-Zа-яА-Я,./*+?^${}()]/
-          
-let sum_salaries = 0
-let title_sum_salarie = 0
+const check = /[a-zA-Zа-яА-Я,./*+?^${}()]/;
 
-//SALARIE CHECK-------------------------------------
-function salarie_check(){
-    const man_salarie_val = parseFloat(man_salarie.value)
-    const woman_salarie_val = parseFloat(woman_salarie.value)
+let sumSalaries = 0;
+let titleSumSalarie = 0;
 
-    users_object.man_name = man_name.value
-    users_object.woman_name = woman_name.value
-    users_object.man_salarie = man_salarie_val
-    users_object.woman_salarie = woman_salarie_val
+// SALARIE CHECK -------------------------------------
+function salarieCheck() {
+    const manSalarieVal = parseFloat(manSalarie.value);
+    const womanSalarieVal = parseFloat(womanSalarie.value);
 
-    sum_salaries = man_salarie_val + woman_salarie_val
-    title_sum_salarie = man_salarie_val + woman_salarie_val
+    usersObject.manName = manName.value;
+    usersObject.womanName = womanName.value;
+    usersObject.manSalarie = manSalarieVal;
+    usersObject.womanSalarie = womanSalarieVal;
 
-    salarie.forEach((el) => el.style.cssText = 'border-bottom: 3px solid #004225; color: #004225')
+    sumSalaries = manSalarieVal + womanSalarieVal;
+    titleSumSalarie = manSalarieVal + womanSalarieVal;
+
+    salarie.forEach((el) => (el.style.cssText = 'border-bottom: 3px solid #004225; color: #004225'));
 }
 
-function salarie_null(){
-    salarie.forEach((el) => el.style.cssText = 'border-bottom: 3px solid #8d0000; color: #8d0000')
-    console.log("ERROR SALARIE") 
+function salarieNull() {
+    salarie.forEach((el) => (el.style.cssText = 'border-bottom: 3px solid #8d0000; color: #8d0000'));
+    console.log('ERROR SALARIE');
 }
 
-//SUM CHECK-------------------------------------
-function sum_check(){sum.forEach((e) => e.style.cssText = 'border-bottom: 3px solid #004225; color: #004225')}
-
-function sum_null(){
-    console.log("ERROR SUM") 
-    sum.forEach((e) => e.style.cssText = 'border-bottom: 3px solid #8d0000; color: #8d0000')
+// SUM CHECK -------------------------------------
+function sumCheck() {
+    sum.forEach((e) => (e.style.cssText = 'border-bottom: 3px solid #004225; color: #004225'));
 }
 
-//SUM AND SALARIE FOREACH-------------------------------------
-sum.forEach((e) => {e.addEventListener('input', ()=>{check.test(e.value) ? sum_null() : sum_check()})})
+function sumNull() {
+    console.log('ERROR SUM');
+    sum.forEach((e) => (e.style.cssText = 'border-bottom: 3px solid #8d0000; color: #8d0000'));
+}
 
-salarie.forEach((el) => {el.addEventListener('input', ()=>{check.test(el.value) ? salarie_null() : salarie_check()})})
+// SUM AND SALARIE FOREACH -------------------------------------
+sum.forEach((e) => {
+    e.addEventListener('input', () => {
+        check.test(e.value) ? sumNull() : sumCheck();
+    });
+});
 
-//ACCEPT CLICK-------------------------------------
-accept.addEventListener('click', ()=>{
-    objective.forEach((e) => objectives.push(e.value))
-    sum.forEach((e) => sums.push(parseFloat(e.value)))
+salarie.forEach((el) => {
+    el.addEventListener('input', () => {
+        check.test(el.value) ? salarieNull() : salarieCheck();
+    });
+});
+
+// ACCEPT CLICK -------------------------------------
+accept.addEventListener('click', () => {
+    objective.forEach((e) => objectives.push(e.value));
+    sum.forEach((e) => sums.push(parseFloat(e.value)));
 
     for (let i = 0; i < 3; i++) {
-        const users_obj_and_sum = {}
-        users_obj_and_sum.user_objective = objectives[i]
-        users_obj_and_sum.user_sum = sums[i]        
-        users_objectives.push(users_obj_and_sum)
+        const usersObjAndSum = {};
+        usersObjAndSum.userObjective = objectives[i];
+        usersObjAndSum.userSum = sums[i];
+        usersObjectives.push(usersObjAndSum);
     }
 
-    console.log(users_objectives);
-    console.log(sum_salaries);
-    localStorage.setItem('information_objectives', JSON.stringify(users_objectives))
-    localStorage.setItem('information_users', JSON.stringify(users_object))
-    localStorage.setItem('total_sum', JSON.stringify(sum_salaries))
-    localStorage.setItem('title_sum_salarie', JSON.stringify(title_sum_salarie))
-    document.querySelector('.next_page').setAttribute('href', '../profile/profile.html')
-})
+    console.log(usersObjectives);
+    console.log(sumSalaries);
+    localStorage.setItem('informationObjectives', JSON.stringify(usersObjectives));
+    localStorage.setItem('informationUsers', JSON.stringify(usersObject));
+    localStorage.setItem('totalSum', JSON.stringify(sumSalaries));
+    localStorage.setItem('titleSumSalarie', JSON.stringify(titleSumSalarie));
+    nextPage.setAttribute('href', '../profile/profile.html');
+});

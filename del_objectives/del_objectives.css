@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
 }
@@ -6,17 +6,15 @@
 body {
     background-image: url('../img/del_objectives/background.svg');
     background-size: cover;
+    font-family: Jost;
 }
 
-img{
+img {
     margin: 20px 0 0 140px;
 }
 
 /* main */
-.delete_object {
-    display: flex;
-    justify-content: center;  
-    align-items: center;  
+.deleteObject {
     width: 250px;
     height: 60px;
     background: #F5F5DC;
@@ -26,15 +24,15 @@ img{
     color: #004225;
     border-radius: 12px;
     transition: .1s;
-    margin-left: auto;
+    /* margin-left: auto; */ /* Видалено для розміщення об'єктів поруч */
 }
 
-.delete_object:hover, .accept_button:hover{
+.deleteObject:hover, .acceptButton:hover {
     scale: 1.1;
     cursor: pointer;
 }
 
-main{
+main {
     width: 820px;
     display: flex;
     flex-direction: column;
@@ -45,19 +43,21 @@ main{
     margin: 50px auto;
 }
 
-.row-container {
+.rowContainer {
     display: flex;
     align-items: center;
 }
 
-.stroke{
-    margin: 50px 50px 0px 50px;
+.stroke {
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 50px 50px 0px 50px;
+    gap: 20px; 
 }
 
-.accept_button{
+
+.acceptButton {
     width: 250px;
     height: 60px;
     padding: 15px;
@@ -70,74 +70,85 @@ main{
     transition: .1s;
 }
 
-.accept_stroke{
+.acceptStroke {
     margin: 50px 50px 50px 50px;
     display: flex;
     justify-content: flex-end;
 }
 
-.object_title {
-    flex: 1;
-    display: flex;
-    align-items: center;
+.objectTitle {
     color: #004225;
-    font-family: Mulish;
+    font-family: Jost;
     font-weight: 600;
     font-size: 20px;
 }
-
-@media (min-width: 768px) and (max-width: 1024px){
-    body {background-image: url('../img/del_objectives/background_tablet.svg'); background-repeat: no-repeat;}
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url('../img/del_objectives/backgroundTablet.svg');
+        background-repeat: no-repeat;
+    }
     
-    img{margin: 20px 0 0 40px;}
+    img {
+        margin: 20px 0 0 40px;
+    }
     
-    main{
+    main {
         width: 620px;
         margin: 30px auto;
     }
 
-    .delete_object {
+    .deleteObject {
         width: 150px;
         font-size: 15px;
     }
 
-    .object_title{font-size: 15px;}    
+    .objectTitle {
+        font-size: 15px;
+    }
 
-    .accept_button{
+    .acceptButton {
         width: 150px;
         font-size: 15px;  
     }
 }
 
-@media (max-width: 767px){
-    body {background-image: url('../img/signUp/mobile_background.svg')}
+@media (max-width: 767px) {
+    body {
+        background-image: url('../img/signUp/mobileBackground.svg');
+    }
     
-    img{
+    img {
         margin: 10px 0 0 20px;
         width: 50px;
     }
     
-    main{
+    main {
         width: 400px;
         margin: 20px auto;
     }
 
-    .delete_object {
+    .deleteObject {
         width: 100px;
         height: 40px;
         font-size: 15px;
     }
 
-    .object_title{font-size: 15px;}    
+    .objectTitle {
+        font-size: 15px;
+    }
 
-    .accept_button{
+    .acceptButton {
         width: 100px;
         height: 40px;
         font-size: 15px;  
         padding: 0;
     }
-    
-    .accept_stroke{margin: 30px 30px 30px 30px;}
 
-    .stroke{margin: 30px 30px 0px 30px;}
+    .acceptStroke {
+        margin: 30px 30px 30px 30px;
+    }
+
+    .stroke {
+        margin: 30px 30px 0px 30px;
+    }
 }

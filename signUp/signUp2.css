@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background: #F5F5DC;
     background-image: url('../img/signUp/Background.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-section{
+section {
     display: grid;
     grid-template-columns: repeat(2, 380px);
     gap: 100px;
@@ -18,10 +18,10 @@ section{
     align-items: center;
 }
 
-.names, .salaries{
+.names, .salaries {
     height: 430px;
     border: 5px solid #004225;
-    border-radius: 12px;    
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,9 +29,11 @@ section{
     margin-top: 100px;
 }
 
-input{background: rgba(0, 0, 0, 0);}
+input {
+    background: rgba(0, 0, 0, 0);
+}
 
-.inp1{
+.inp1 {
     width: 200px;
     height: 50px;
     border: 3px solid #004225;
@@ -45,7 +47,7 @@ input{background: rgba(0, 0, 0, 0);}
     font-weight: 500;
 }
 
-.inp1::placeholder{
+.inp1::placeholder {
     text-align: center;
     font-family: "Jost";
     font-weight: 500;
@@ -53,15 +55,15 @@ input{background: rgba(0, 0, 0, 0);}
     color: rgba(0, 66, 37, 0.7);
 }
 
-input:focus{
+input:focus {
     outline: 0;
 }
 
-input:focus::placeholder{
+input:focus::placeholder {
     color: transparent;
 }
 
-.objectives{
+.objectives {
     width: 760px;
     height: 500px;
     display: flex;
@@ -72,7 +74,7 @@ input:focus::placeholder{
     margin: 100px auto;
 }
 
-.title{
+.title {
     font-family: Jost;
     font-weight: 500;
     font-size: 30px;
@@ -84,7 +86,7 @@ input:focus::placeholder{
     margin: 25px 25px;
 }
 
-.inp2{
+.inp2 {
     width: 150px;
     height: 50px;
     border: 3px solid #004225;
@@ -97,24 +99,23 @@ input:focus::placeholder{
     font-weight: 500;
 }
 
-.inp2::placeholder{
+.inp2::placeholder {
     font-family: "Jost";
     font-weight: 500;
     font-size: 20px;
     color: rgba(0, 66, 37, 0.7);
 }
 
-
-.objective{
+.objective {
     display: flex;
     justify-content: space-between;
 }
 
-.objective:nth-child(4){
+.objective:nth-child(4) {
     margin-bottom: 30px;
 }
 
-.sum{
+.sum {
     width: 70px;
     height: 50px;
     border: 3px solid #004225;
@@ -127,19 +128,19 @@ input:focus::placeholder{
     font-weight: 500;
 }
 
-.sum::placeholder{
+.sum::placeholder {
     text-align: center;
     color: rgba(0, 66, 37, 0.7);
 }
 
-.inp2, .sum{
+.inp2, .sum {
     margin: 0 25px 10px 25px;
 }
 
-.accept{
+.accept {
     width: 300px;
     height: 50px;
-    background:#F5F5DC;
+    background: #F5F5DC;
     border: 3px solid #004225;
     color: #004225;
     font-size: 15px;
@@ -148,52 +149,55 @@ input:focus::placeholder{
     font-weight: 500;
 }
 
-.next_page{
+.nextPage {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-.check_elipse{
+.checkElipse {
     width: 20px;
     height: 20px;
 }
 
-a{
+a {
     text-decoration: none;
     color: #004225;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    section{
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
         grid-template-columns: repeat(2, 320px);
-        gap: 70px;        
+        gap: 70px;
     }
-    
-    .objectives{width: 710px;}
+
+    .objectives {
+        width: 710px;
+    }
 }
 
-@media (max-width: 767px){
-    body{
-        background: url("../img/signUp/mobile_background.svg");
+@media (max-width: 767px) {
+    body {
+        background: url("../img/signUp/mobileBackground.svg");
         background-repeat: no-repeat;
     }
 
-    section{
+    section {
         display: grid;
         grid-template-columns: repeat(1, 350px);
         gap: 25px;
     }
 
-    .names, .salaries {margin-top: 50px;}
+    .names, .salaries {
+        margin-top: 50px;
+    }
 
-    .objectives{
+    .objectives {
         width: 350px;
         margin: 70px auto;
     }
-    
 }
