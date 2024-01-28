@@ -58,6 +58,6 @@
 
 ![ChangeObjImg](../family_wizard/img/readme/TdReadMe.png)
 
-Після того, як ми редагували ім'я або заплатню, ми натискаємо **Зберегти** Ім'я/Заплатню
+Після того, як ми редагували ім'я або заплатню, ми натискаємо **Зберегти Ім'я/Заплатню**
 
 ![ChangeObjImg](../family_wizard/img/readme/ChangeObjImg.png)
