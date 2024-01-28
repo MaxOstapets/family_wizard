@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Main settings */
+body {
+    background-image: url("../img/about-us/BackgroundAboutUs.png");
+    background-size: cover;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.desc {
+    flex-direction: column;
+}
+
+p {
+    color: #004225;
+    font-size: 30px;
+}
+
+/* Main description */
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Russo One;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #004225;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #004225;
+    padding: 15px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    color: #F5F5DC;
+    font-size: 15px;
+    font-family: "M PLUS Rounded 1c";
+}
+
+li {
+    list-style: none;
+}
+
+.logo,
+.accountLogo {
+    width: 65px;
+    height: 65px;
+}
+
+main {
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #F5F5DC;
+}
+
+/* 1-Descriptor */
+.firstDesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.descText1 {
+    display: flex;
+    font-family: "Mulish";
+    width: 800px;
+}
+
+h2 {
+    font-family: "Russo One";
+    font-size: 3rem;
+    color: #004225;
+}
+
+/* 2-Descriptor */
+.secDesc, .thirdDesc {
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish";
+    align-items: center;
+}
+
+.descText2 p, .descText3 {
+    text-align: center;
+}
+
+h3, h4 {
+    font-family: Russo One;
+    font-size: 4rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #004225;
+}
+
+/* 3-Descriptor */
+/* .thirdDesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.descText3 {
+    font-family: "Mulish";
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 30px;
+}
+
+h4 {
+    font-family: Russo One;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #004225;
+} */
+
+/* 4-Descriptor
+.fourthDesc {
+    display: flex;
+    margin: 0;
+    font-family: "Mulish";
+    padding: 20px;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: Russo One;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 72px;
+    padding-left: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #004225;
+} */
+
+/* Phone Styles */
+@media screen and (max-width: 480px) {
+    body {
+        background-image: url(../img/signUp/mobileBackground.svg);
+    }
+
+    ul {
+        gap: 40px;
+        font-size: 10px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .icon,
+    .accountIcon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container {
+        padding: 10%;
+    }
+
+    .descText2 p,
+    .descText3 {
+        text-align: center;
+        width: 380px;
+    }
+
+    .descText1 {
+        width: 250px;
+    }
+
+    .firstDescImg {
+        margin: 0 0 0 30px;
+        width: 130px;
+    }
+
+    .secDescImg,
+    .thirdDescImg {
+        margin-top: 20px;
+        width: 380px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+}

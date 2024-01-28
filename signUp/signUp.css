@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+.signUp{
+    background: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signUpTitle{
+    color: #004225;
+    font-size: 45px;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    margin-bottom: 60px;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 80px;
+}
+
+input{
+    width: 600px;
+    height: 50px;
+    border: 3px solid #004225;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+    font-family: "Jost";
+    font-weight: 500;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input::placeholder{
+    text-align: center;
+    font-family: "Jost";
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(0, 66, 37, 0.5);
+}
+
+input:focus{outline: 0;}
+input:focus::placeholder{color: transparent;}
+.password{margin-bottom: 50px;}
+
+.wrongPassword, .wrongEmail{
+    font-family: "Fira Sans";
+    color: red;
+    font-size: 20px;   
+    margin-bottom: 10px;
+}
+
+button{
+    width: 600px;
+    height: 50px;
+    border: 3px solid #004225;
+    background: #F5F5DC;
+    font-size: 20px;
+    color: #004225;
+    border-radius: 12px;
+    font-family: Jost;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.withGoogle, .withFacebook{
+    display: flex;
+    align-items: center;    
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.withGoogle{margin: 140px 0 20px 0;}
+.icons{width: 30px;}
+
+.descriptor{
+    background: #FFB000;
+    font-family: Mulish;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.descriptorTitle{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+about{margin-bottom: 20px;}
+
+.list, .about{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.content{
+    margin-left: 130px;
+    width: 560px;
+}
+
+.descriptorTitle{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px){
+section{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    height: 100vh;
+}
+
+.signUpTitle{
+    font-size: 25px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
+
+input{
+    width: 300px;
+    font-size: 15px;
+}
+
+button{
+    width: 300px;
+    height: 50px;
+    font-size: 10px;
+}
+
+.withGoogle, .withFacebook{
+    display: flex;
+    align-items: center;    
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.wrongPassword, .wrongEmail{
+    font-size: 15px;   
+    margin-bottom: 10px;
+}
+
+input::placeholder{font-size: 10px;}
+.withGoogle{margin: 140px 0 20px 0;}
+.icons{width: 30px;}
+.withGoogle{margin: 90px 0 20px 0;}
+descriptor{display: none;}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="shortcut icon" href="../img/profile/Icon.svg" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Jost&family=M+PLUS+Rounded+1c&family=Mulish:wght@600&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <title>Family Wizard profile</title>
+</head>
+<body>
+    <nav>
+        <img src="../img/profile/Icon.svg" class="icon" alt="">
+        <ul>
+            <li><a href="../header.html" class="navLink">Головна</a></li>
+            <li><a href="../signUp/signUp.html" class="navLink">Реєстрація</a></li>
+            <li><a href="../signIn/signIn.html" class="navLink">Увійти</a></li>
+            <li><a href="../about-us/about-us.html" class="navLink">Про нас</a></li>
+        </ul>
+        <a href="../profile/profile.html"><img src="../img/profile/accountIcon.png" class="accountIcon" alt=""></a>
+    </nav>
+    <main>
+        <div class="account">
+            <div class="accInfo">
+                <img src="../img/profile/accPhoto.png" class="accPhoto" alt="">
+                <div class="info">
+                    <span class="textInfo manNameSalarie"></span>
+                    <span class="textInfo womanNameSalarie"></span>
+                    <span class="textInfo totalSalarieSum"></span>
+                    <span class="textInfo averageExpense"></span>
+                </div>
+            </div>
+            <div class="accButtons">
+                <button class="addObjectives"><a href="../add_objectives/add_objectives.html" class="btnLink">Додати
+                        витрати</a></button>
+                <button class="deleteObjectives"><a href="../del_objectives/del_objectives.html"
+                        class="btnLink">Видалити витрати</a></button>
+                <button class="editAccount"><a href="../settings/settings.html" class="btnLink">Редагувати
+                        акаунт</a></button>
+            </div>
+        </div>
+        <div class="titles">
+            <h1 class="sum">Загальна сума:</h1>
+            <h1 class="objectivesSum"></h1>
+        </div>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>
