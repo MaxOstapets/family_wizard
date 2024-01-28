@@ -17,14 +17,14 @@
 
 ### 2.Треба **Зареєструватися**
 
-![SignUpImg](../family_wizard/img/readme/Sign%20up%201.png)
+![SignUpImg](../family_wizard/img/readme/SignUpFt.png)
 
 ### 3.Після того, як ви зареєструвалися, треба ввести 
 + Імя Чоловіка
 + Імя Жінки
 + Їхні заплати
 
-![SignUp2Img](../family_wizard/img/readme/Sign%20up%202.png)
+![SignUp2Img](../family_wizard/img/readme/SighUpSc.png)
 
 **Все** тепер ви можете користуватися Family Wizard!
 
@@ -59,4 +59,5 @@
 ![ChangeObjImg](../family_wizard/img/readme/TdReadMe.png)
 
 Після того, як ми редагували ім'я або заплатню, ми натискаємо **Зберегти** Ім'я/Заплатню
+
 ![ChangeObjImg](../family_wizard/img/readme/ChangeObjImg.png)
