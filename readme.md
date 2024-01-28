@@ -13,18 +13,18 @@
 
 ### 1.Треба зайти на **Головну сторінку**
 
-![HeaderImg](../family_wizard/img/readme/Header.png)
+![HeaderImg](./img/readme/Header.png)
 
 ### 2.Треба **Зареєструватися**
 
-![SignUpImg](../family_wizard/img/readme/SignUpFt.png)
+![SignUpImg](./img/readme/SignUpFt.png)
 
 ### 3.Після того, як ви зареєструвалися, треба ввести 
 + Імя Чоловіка
 + Імя Жінки
 + Їхні заплати
 
-![SignUp2Img](../family_wizard/img/readme/SighUpSc.png)
+![SignUp2Img](./img/readme/SighUpSc.png)
 
 **Все** тепер ви можете користуватися Family Wizard!
 
@@ -33,22 +33,23 @@
 ### **Забув додати витрату**
 Якщо ви забули додати якусь витрату, то зайдіть на свій профіль та натисніть на кнопку **Додати витрати**
 
-![AddObjImg](../family_wizard/img/readme/FtReadMe.png)
+![AddObjImg](./img/readme/FtReadMe.png)
 
 Потім записуєте витрати, які ви забули додати або вони з'явились нещодавно
 
-![AddObjImg](../family_wizard/img/readme/AddObjImg.png)
+![AddObjImg](./img/readme/AddObjImg.png)
+
 Та натискаємо на **Підтвердити**
 
 ### **Випадково додав зайву витрату**
 
 Якщо ви випадково додали зайву витрату або витрата згоріла, то натисніть на кнопку **Видалити витрати**
 
-![DelObjImg](../family_wizard/img/readme/ScReadMe.png)
+![DelObjImg](./img/readme/ScReadMe.png)
 
 Після того, як ми натиснули на кнопку треба знайти витрату яку ми хочемо видалити та натискаємо на **Видалити**
 
-![DelObjImg](../family_wizard/img/readme/DelObjImg.png)
+![DelObjImg](./img/readme/DelObjImg.png)
 
 Натискаємо **Зберегти**
 
@@ -56,8 +57,8 @@
 
 Якщо ви помилилися у заплатні чи імені, то натисніть на кнопку **Редагувати аккаунт**
 
-![ChangeObjImg](../family_wizard/img/readme/TdReadMe.png)
+![ChangeObjImg](./img/readme/TdReadMe.png)
 
 Після того, як ми редагували ім'я або заплатню, ми натискаємо **Зберегти Ім'я/Заплатню**
 
-![ChangeObjImg](../family_wizard/img/readme/ChangeObjImg.png)
+![ChangeObjImg](./img/readme/ChangeObjImg.png)
