@@ -164,6 +164,8 @@ h2 {
 
 /* adaptation for phones */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
     .container {
         padding: 5%;
     }
@@ -193,6 +195,11 @@ h2 {
 
 /* Phone Styles */
 @media screen and (max-width: 480px) {
+    body{
+        background-image: url(../img/about-us/background_phones_about-us.svg);
+        background-size: cover;
+    }
+
     .container {
         padding: 10%;
     }
