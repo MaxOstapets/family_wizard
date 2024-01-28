@@ -1,11 +1,11 @@
 const manName = document.querySelector('.manName')
-const womanName = document.querySelector('.womanSame')
+const womanName = document.querySelector('.womanName')
 
 const manSalarie = document.querySelector('.manSalarie')
 const womanSalarie = document.querySelector('.womanSalarie')
 const salarie = document.querySelectorAll('.salarie')
 
-const usersObject = {}
+let usersObject = {}
 
 const accept = document.querySelector('.accept')
 const nextPage = document.querySelector('.nextPage')
@@ -15,12 +15,12 @@ const check = /[a-zA-Zа-яА-Я,./*+?^${}()]/
 let sumSalaries = 0
 let titleSumSalarie = 0
 
-const users_str = localStorage.getItem('information_users')
+const users_str = localStorage.getItem('informationUsers')
 const users = JSON.parse(users_str)
-man_name.value = `${users.man_name}` 
-woman_name.value = `${users.woman_name}`
-man_salarie.value = `${users.man_salarie}`
-woman_salarie.value = `${users.woman_salarie}`
+manName.value = `${users.manName}` 
+womanName.value = `${users.womanName}`
+manSalarie.value = `${users.manSalarie}`
+womanSalarie.value = `${users.womanSalarie}`
 
 // SALARIE CHECK-------------------------------------
 function salarieCheck() {
@@ -50,8 +50,16 @@ salarie.forEach((el) => {
 
 // ACCEPT CLICK-------------------------------------
 accept.addEventListener('click', () => {
-    localStorage.setItem('informationUsers', JSON.stringify(usersObject))
-    localStorage.setItem('totalSum', JSON.stringify(sumSalaries))
-    localStorage.setItem('titleSumSalarie', JSON.stringify(titleSumSalarie))
-    nextPage.setAttribute('href', '../profile/profile.html')
-})
+    usersObject = {
+        manName: manName.value,
+        womanName: womanName.value,
+        manSalarie: parseFloat(manSalarie.value),
+        womanSalarie: parseFloat(womanSalarie.value)
+    };
+
+    localStorage.setItem('informationUsers', JSON.stringify(usersObject));
+    localStorage.setItem('totalSum', JSON.stringify(sumSalaries));
+    localStorage.setItem('titleSumSalarie', JSON.stringify(titleSumSalarie));
+
+    nextPage.setAttribute('href', '../profile/profile.html');
+});

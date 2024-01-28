@@ -21,10 +21,6 @@ body {
 p {
     color: #004225;
     font-size: 30px;
-<<<<<<< HEAD
-    /* padding: 10px; */
-=======
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
 }
 
 /* Main description */
@@ -96,24 +92,15 @@ h2 {
     color: #004225;
 }
 
-<<<<<<< HEAD
-/* 2-discriptor */
-.sec-desc , .third-desc{
-=======
 /* 2-Descriptor */
 .secDesc, .thirdDesc {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     display: flex;
     flex-direction: column;
     font-family: "Mulish";
     align-items: center;
 }
 
-<<<<<<< HEAD
-.desc-text2 p , .desc-text3{
-=======
 .descText2 p, .descText3 {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     text-align: center;
 }
 
@@ -125,13 +112,8 @@ h3, h4 {
     color: #004225;
 }
 
-<<<<<<< HEAD
-/* 3-discriptor */
-/* .third-desc {
-=======
 /* 3-Descriptor */
 /* .thirdDesc {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,13 +136,8 @@ h4 {
     color: #004225;
 } */
 
-<<<<<<< HEAD
-/* 4-discriptor
-.fourth-desc {
-=======
 /* 4-Descriptor
 .fourthDesc {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     display: flex;
     margin: 0;
     font-family: "Mulish";
@@ -178,55 +155,6 @@ h2 {
     text-align: left;
     color: #004225;
 } */
-<<<<<<< HEAD
-
-/* adaptation for phones */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        padding: 5%;
-    }
-
-    h1 {
-        font-size: 50px;
-        line-height: 60px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    h3 {
-        font-size: 40px;
-    }
-
-    h4 {
-        font-size: 50px;
-        line-height: 60px;
-    }
-}
-
-/* Phone Styles */
-@media screen and (max-width: 480px) {
-    body{
-        background-image: url(../img/signUp/mobile_background.svg);
-        
-    }
-
-    ul{
-        gap: 40px;
-        font-size: 10px;
-    }
-    
-    main{
-        margin-top: 60px;
-    }
-
-    .icon, .account_icon{
-=======
 
 /* Phone Styles */
 @media screen and (max-width: 480px) {
@@ -245,55 +173,31 @@ h2 {
 
     .icon,
     .accountIcon {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
         width: 35px;
         height: 35px;
     }
 
-<<<<<<< HEAD
-    /* .first-desc{
-        margin: 0;
-    } */
-
-=======
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     .container {
         padding: 10%;
     }
 
-<<<<<<< HEAD
-    .desc-text2 p , .desc-text3{
-=======
     .descText2 p,
     .descText3 {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
         text-align: center;
         width: 380px;
     }
 
-<<<<<<< HEAD
-    .desc-text1{
-        width: 250px;
-    }
-
-    .first-desc-img{
-=======
     .descText1 {
         width: 250px;
     }
 
     .firstDescImg {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
         margin: 0 0 0 30px;
         width: 130px;
     }
 
-<<<<<<< HEAD
-    .sec-desc-img , .third-desc-img{
-=======
     .secDescImg,
     .thirdDescImg {
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
         margin-top: 20px;
         width: 380px;
     }
@@ -317,9 +221,5 @@ h2 {
 
     h4 {
         font-size: 28px;
-<<<<<<< HEAD
-
-=======
->>>>>>> 2ceff66c03074b000b45b36c1b43ae5ba081fd7c
     }
 }
